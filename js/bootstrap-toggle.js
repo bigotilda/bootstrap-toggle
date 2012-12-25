@@ -1,8 +1,9 @@
 /**
- * bootstrap-toggle.js v1.0
+ * bootstrap-toggle.js v1.0.0
  * http://github.com/Nijikokun/bootstrap-toggle/
  * --
-  * Copyright 2012 Goodybag Inc.
+ * Copyright 2012 Nijiko Yonskai <nijikokun@gmail.com>
+ * Copyright 2012 Goodybag Inc.
  * --
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +17,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
-!function ($) {
-  
+
+(function ($) {
+
   var Toggle = function (element, options) {
     var self = this;
 
@@ -29,22 +30,22 @@
 
     // Initial Setup from options
     if(this.options.text.enabled) this.$element.attr('data-enabled', this.options.text.enabled)
-    if(this.options.text.disabled) this.$element.attr('data-disabled', this.options.text.disabled)      
+    if(this.options.text.disabled) this.$element.attr('data-disabled', this.options.text.disabled)
 
     // setup state
     this.setState(this.$checkbox.is(':checked'))
-    
+
     // Setup Click
     this.$element.click(function (e) {
       if(self.options.onClick) self.options.onClick(e, self.$checkbox.is(':checked'))
       self.toggleSlide()
     });
   }
-  
+
   Toggle.prototype.setState = function (state) {
     // change checkbox state
     this.$checkbox.attr('checked', state)
-    
+
     if(state) {
       this.$element.removeClass('disabled')
       if(this.options.style.disabled)
@@ -59,29 +60,29 @@
         this.$element.addClass('disabled-' + this.options.style.disabled)
     }
   }
-  
+
   Toggle.prototype.on = function () {
     this.setState(true)
   }
-  
+
   Toggle.prototype.off = function () {
     this.setState(false)
   }
-  
+
   Toggle.prototype.toggleSlide = function () {
     var status = this.$checkbox.is(':checked')
 
     // Toggle status
     this.setState(!status)
   }
-  
+
   /*
    * Toggle Definition
    */
   $.fn.toggleSlide = function (options) {
-    return new Toggle(this, typeof options == 'object' ? options : {})
+    return new Toggle(this, typeof options === 'object' ? options : {})
   }
-  
+
   $.fn.toggleSlide.defaults = {
     onClick: function () {},
     text: {
@@ -93,6 +94,6 @@
       disabled: false
     }
   }
-  
+
   $.fn.toggleSlide.Constructor = Toggle
-}(window.jQuery);
+})(window.jQuery);
