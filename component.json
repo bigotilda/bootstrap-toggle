@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-toggle",
+  "version": "1.0.0",
+  "main": "js/bootstrap-toggle.js",
+  "dependencies": {},
+  "description": "Fancy and Flexible Bootstrap Toggle Switches.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nijikokun/bootstrap-toggle.git"
+  }
+}
