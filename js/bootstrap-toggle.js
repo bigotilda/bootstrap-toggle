@@ -37,7 +37,7 @@
 
     // Setup Click
     this.$element.click(function (e) {
-      if(self.options.onClick) self.options.onClick(e, self.$checkbox.is(':checked'))
+      if(self.options.onClick) self.options.onClick(e, self.$checkbox, self.$checkbox.is(':checked'))
       self.toggleSlide()
     });
   }
@@ -80,7 +80,9 @@
    * Toggle Definition
    */
   $.fn.toggleSlide = function (options) {
-    return new Toggle(this, typeof options === 'object' ? options : {})
+    return this.each(function() {
+      new Toggle(this, typeof options == 'object' ? options : {})
+    });
   }
 
   $.fn.toggleSlide.defaults = {
