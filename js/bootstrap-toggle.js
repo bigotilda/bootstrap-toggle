@@ -44,7 +44,7 @@
 
   Toggle.prototype.setState = function (state) {
     // change checkbox state
-    this.$checkbox.attr('checked', state)
+    this.$checkbox.prop('checked', state)
 
     if(state) {
       this.$element.removeClass('disabled')
