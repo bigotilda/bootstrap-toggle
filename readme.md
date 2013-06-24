@@ -2,7 +2,7 @@ Bootstrap Toggle Switches
 =========================
 
 * Checkbox state setting now compatible to jQuery 1.9
-* LESS support for `bootstrap-toggle.css`
+* LESS support for both `bootstrap-toggle.css` and `bootstrap-toggle-animated.css`
 * Check out `examples` for usage
 * Enjoy, Nijiko and Nate tried to make it as versatile as possible!
 
