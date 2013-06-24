@@ -1,0 +1,70 @@
+@import "bootstrap-toggle.less";
+
+
+.LabelON () {
+  0% {   .checkbox_offset();  }
+  100% { .checkbox_offset_checked() }
+}
+
+
+.LabelOFF () {
+  0% {   .checkbox_offset_checked(); }
+  100% { .checkbox_offset(); }
+}
+
+
+.animation(@anim_name, @duration: 0.07s) {
+
+  -webkit-animation-name: @anim_name;
+     -moz-animation-name: @anim_name;
+      -ms-animation-name: @anim_name;
+          animation-name: @anim_name;
+
+  -webkit-animation-duration: @duration;
+     -moz-animation-duration: @duration;
+      -ms-animation-duration: @duration;
+          animation-duration: @duration;
+
+  -webkit-animation-iteration-count: 1;
+     -moz-animation-iteration-count: 1;
+      -ms-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+
+  -webkit-animation-timing-function: ease-in;
+     -moz-animation-timing-function: ease-in;
+      -ms-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+
+
+@-webkit-keyframes enableSwitch { .LabelON(); }
+@-moz-keyframes    enableSwitch { .LabelON(); }
+@-ms-keyframes     enableSwitch { .LabelON(); }
+@-o-keyframes      enableSwitch { .LabelON(); }
+@keyframes         enableSwitch { .LabelON(); }
+
+
+@-webkit-keyframes disableSwitch { .LabelOFF(); }
+@-moz-keyframes    disableSwitch { .LabelOFF(); }
+@-ms-keyframes     disableSwitch { .LabelOFF(); }
+@-o-keyframes      disableSwitch { .LabelOFF(); }
+@keyframes         disableSwitch { .LabelOFF(); }
+
+
+
+.toggle input[type=checkbox] + label.check {
+  .animation( disableSwitch );
+
+   -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+       -ms-transform: translate3d(0, 0, 0);
+           transform: translate3d(0, 0, 0);
+}
+
+
+.toggle input[type=checkbox]:checked + label.check {
+  .animation( enableSwitch );
+}
+
+
