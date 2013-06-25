@@ -6,10 +6,18 @@ Bootstrap Toggle Switches
 * Check out `examples` for usage
 * Enjoy, Nijiko and Nate tried to make it as versatile as possible!
 
+### Requirements
+
+1. [jQuery](http://jquery.com) 1.10
+2. [Bootstrap](http://twitter.github.com/bootstrap) 2.3.2
+
 ### Installation
 
-Just include `bootstrap-toggle.css` right after [Bootstrap](http://twitter.github.com/bootstrap)'s CSS;
+First, include `bootstrap-toggle.css` right after Bootstrap's CSS;
 alternatively use `bootstrap-toggle-animated.css` for animated switches.
+
+Second, include `bootstrap-toggle.js` after jQuery.
+
 
 ### Contributors
 
