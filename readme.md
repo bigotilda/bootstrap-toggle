@@ -11,7 +11,7 @@ Bootstrap Toggle Switches
 1. [jQuery](http://jquery.com) 1.10
 2. [Bootstrap](http://twitter.github.com/bootstrap) 2.3.2
 
-### Installation
+## Installation
 
 First, include `bootstrap-toggle.css` right after Bootstrap's CSS;
 alternatively use `bootstrap-toggle-animated.css` for animated switches.
@@ -19,15 +19,12 @@ alternatively use `bootstrap-toggle-animated.css` for animated switches.
 Second, include `bootstrap-toggle.js` after jQuery.
 
 
-####HTML:
+##Usage:
 
     <div class="toggle basic" data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
         <input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
         <label class="check" for="myCheckbox"></label>
     </div>
-
-
-####Javascript:
 
     <script>
     $('.basic').toggleSlide();
