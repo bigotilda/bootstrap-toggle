@@ -19,6 +19,21 @@ alternatively use `bootstrap-toggle-animated.css` for animated switches.
 Second, include `bootstrap-toggle.js` after jQuery.
 
 
+####HTML:
+
+    <div class='toggle basic' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
+        <input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
+        <label class="check" for="myCheckbox"></label>
+    </div>
+
+
+####Javascript:
+
+    <script>
+    $('.basic').toggleSlide();
+    </script>
+
+
 ### Contributors
 
 * Nate Nadeau <https://github.com/bigotilda>
