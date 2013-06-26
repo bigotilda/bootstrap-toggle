@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Twitter Bootstrap Toggles, from Nijiko Yonskai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Toggle buttons for twitter bootstrap">
-    <meta name="author" content="Nijiko Yonskai">
+    <meta name="description" content="Toggle buttons for Twitter Bootstrap">
+    <meta name="author" content="Carsten Witt">
 
     <!-- Le styles -->
     <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
@@ -24,26 +24,26 @@
       <div class="row">
         <div class="span3">
           <div class="span12">&nbsp;</div>
-          
+
           <div class="span12">
-            <a href="https://github.com/Nijikokun/bootstrap-toggle" class='btn'>Fork On Github</a>
+            <a href="https://github.com/tomkyle/bootstrap-toggle" class='btn'>Fork On Github</a>
           </div>
-          
+
           <div class="span12">&nbsp;</div>
-          
+
           <div class="span12">
-            <a href="http://nijikokun.github.com/bootstrap-toggle/index.html">View Non-Animated Toggle Switches</a>
+            <a href="index.html">View Non-Animated Toggle Switches</a>
           </div>
-          
+
           <div class="span12">&nbsp;</div>
-          
+
           <div class='toggle basic' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
             <input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
             <label class="check" for="myCheckbox"></label>
           </div>
-          
+
           <div class="span12">&nbsp;</div>
-          
+
           <div class='toggle alternative' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
             <input type="checkbox" value="1" name="myCheckbox" class="checkbox" checked="checked" />
             <label class="check" for="myCheckbox"></label>
@@ -54,7 +54,7 @@
             <h1>Twitter Bootstrap Extensions: Toggle Switches</h1>
           </div>
 
-          <p>Introducing... Toggle Switches for Twitter Bootstrap!? Yes, toggle switches. Like those fancy pants iphone users have and styled in a bootstrap manner with some fancy css and javascript:</p>
+          <p>Introducing... Toggle Switches for Twitter Bootstrap!? Yes, toggle switches like those fancy pants iphone users have and styled in a bootstrap manner with some fancy css and javascript:</p>
 
           <h4>Html:</h4>
 <pre class='prettyprint'>
@@ -64,7 +64,7 @@
   &lt;/div>
 </pre>
 
-          <h4>Js:</h4>
+          <h4>Javascript:</h4>
 <pre class='prettyprint'>
   &lt;script>
     // Don't use .toggle, it will be global.
@@ -76,7 +76,7 @@
       },
       style: {
         enabled: 'primary', // default button styles like btn-primary, btn-info, btn-warning just remove the btn- part.
-        disabled: false // same goes for this, primary, info, warning, danger, success. 
+        disabled: false // same goes for this, primary, info, warning, danger, success.
       }
     });
   &lt;/script>
@@ -88,13 +88,13 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
     <script src="../js/bootstrap-toggle.js"></script>
     <script>
       // Pretty print
       window.prettyPrint && prettyPrint()
-      
+
       // Basic Features, style isn't even required.
       $('.basic').toggleSlide({
         style: {
